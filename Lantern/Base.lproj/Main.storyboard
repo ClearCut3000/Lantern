@@ -15,13 +15,29 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" highlighted="YES" selected="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" translatesAutoresizingMaskIntoConstraints="NO" id="4ux-80-rPh">
+                                <rect key="frame" x="182.5" y="437.5" width="51" height="31"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                <connections>
+                                    <action selector="torchSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="DCb-wg-j8L"/>
+                                </connections>
+                            </switch>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4ux-80-rPh" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="2Y1-Gg-W2Y"/>
+                            <constraint firstItem="4ux-80-rPh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yuP-AA-bwE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="torchOnOff" destination="4ux-80-rPh" id="c53-Xe-Fhk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9" y="58"/>
+            <point key="canvasLocation" x="8.6956521739130448" y="57.589285714285708"/>
         </scene>
     </scenes>
     <resources>

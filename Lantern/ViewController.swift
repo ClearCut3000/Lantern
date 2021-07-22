@@ -52,18 +52,25 @@ class ViewController: UIViewController {
             view.backgroundColor = .yellow
         case 5:
             view.backgroundColor = .green
-        case 6:
-            view.backgroundColor = .orange
-            toggleTorch(on: true)
         default:
             view.backgroundColor = .white
+        }
+    }
+
+    @IBOutlet var torchOnOff: UISwitch!
+    
+    @IBAction func torchSwitch(_ sender: UISwitch) {
+        
+        if torchOnOff.isOn {
+            toggleTorch(on: true)
+        } else{
+            toggleTorch(on: false)
         }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         isLigntOn += 1
-        if isLigntOn > 6 {
-            toggleTorch(on: false)
+        if isLigntOn > 5 {
             isLigntOn = 1
         }
         updateUI()
